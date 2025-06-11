@@ -1,73 +1,185 @@
 // Translation system
 const translations = {
-  fr: {
-    pageTitle: "Carte de Visite Numérique - Amir Damak | MarQenti",
-    navBusinessCard: "Carte de Visite",
-    navContact: "Nous Contacter",
-    jobTitle: "PDG & Fondateur",
-    address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisie",
-    contactUsBtn: "Nous Contacter",
-    contactHeading: "Travaillons Ensemble<span>.</span>",
-    contactText: "Ou contactez-nous directement via",
-    firstName: "Prénom",
-    lastName: "Nom de famille",
-    email: "Adresse e-mail",
-    company: "Entreprise (optionnel)",
-    phone: "Numéro de téléphone (optionnel)",
-    message: "Votre message",
-    attachFile: "Joindre un fichier",
-    submitBtn: "Envoyer le message",
-    poweredBy: "Propulsé par",
-    // Form messages
-    sendingMessage: "Envoi en cours...",
-    messageSent: "Message envoyé avec succès!",
-    fileSelected: "Fichier sélectionné"
+  // Amir Damak translations
+  amir: {
+    fr: {
+      pageTitle: "Carte de Visite Numérique - Amir Damak | MarQenti",
+      navBusinessCard: "Carte de Visite",
+      navContact: "Nous Contacter",
+      jobTitle: "PDG & Fondateur",
+      address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisie",
+      contactUsBtn: "Nous Contacter",
+      contactHeading: "Travaillons Ensemble<span>.</span>",
+      contactText: "Ou contactez-nous directement via",
+      firstName: "Prénom",
+      lastName: "Nom de famille",
+      email: "Adresse e-mail",
+      company: "Entreprise (optionnel)",
+      phone: "Numéro de téléphone (optionnel)",
+      message: "Votre message",
+      attachFile: "Joindre un fichier",
+      submitBtn: "Envoyer le message",
+      poweredBy: "Propulsé par",
+      // Form messages
+      sendingMessage: "Envoi en cours...",
+      messageSent: "Message envoyé avec succès!",
+      fileSelected: "Fichier sélectionné"
+    },
+    en: {
+      pageTitle: "Digital Business Card - Amir Damak | MarQenti",
+      navBusinessCard: "Business Card",
+      navContact: "Contact Us",
+      jobTitle: "CEO & Founder",
+      address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisia",
+      contactUsBtn: "Contact Us",
+      contactHeading: "Let's Work Together<span>.</span>",
+      contactText: "Or contact us directly via",
+      firstName: "First Name",
+      lastName: "Last Name",
+      email: "Email Address",
+      company: "Company (optional)",
+      phone: "Phone Number (optional)",
+      message: "Your Message",
+      attachFile: "Attach File",
+      submitBtn: "Send Message",
+      poweredBy: "Powered by",
+      // Form messages
+      sendingMessage: "Sending...",
+      messageSent: "Message sent successfully!",
+      fileSelected: "File selected"
+    }
   },
-  en: {
-    pageTitle: "Digital Business Card - Amir Damak | MarQenti",
-    navBusinessCard: "Business Card",
-    navContact: "Contact Us",
-    jobTitle: "CEO & Founder",
-    address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisia",
-    contactUsBtn: "Contact Us",
-    contactHeading: "Let's Work Together<span>.</span>",
-    contactText: "Or contact us directly via",
-    firstName: "First Name",
-    lastName: "Last Name",
-    email: "Email Address",
-    company: "Company (optional)",
-    phone: "Phone Number (optional)",
-    message: "Your Message",
-    attachFile: "Attach File",
-    submitBtn: "Send Message",
-    poweredBy: "Powered by",
-    // Form messages
-    sendingMessage: "Sending...",
-    messageSent: "Message sent successfully!",
-    fileSelected: "File selected"
+  
+  // Yessine Gargouri translations
+  yessine: {
+    fr: {
+      pageTitle: "Carte de Visite Numérique - Yessine Gargouri | MarQenti",
+      navBusinessCard: "Carte de Visite",
+      navContact: "Nous Contacter",
+      jobTitle: "Directeur Commercial",
+      address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisie",
+      contactUsBtn: "Nous Contacter",
+      contactHeading: "Travaillons Ensemble<span>.</span>",
+      contactText: "Ou contactez-nous directement via",
+      firstName: "Prénom",
+      lastName: "Nom de famille",
+      email: "Adresse e-mail",
+      company: "Entreprise (optionnel)",
+      phone: "Numéro de téléphone (optionnel)",
+      message: "Votre message",
+      attachFile: "Joindre un fichier",
+      submitBtn: "Envoyer le message",
+      poweredBy: "Propulsé par",
+      // Form messages
+      sendingMessage: "Envoi en cours...",
+      messageSent: "Message envoyé avec succès!",
+      fileSelected: "Fichier sélectionné"
+    },
+    en: {
+      pageTitle: "Digital Business Card - Yessine Gargouri | MarQenti",
+      navBusinessCard: "Business Card",
+      navContact: "Contact Us",
+      jobTitle: "Sales Director",
+      address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisia",
+      contactUsBtn: "Contact Us",
+      contactHeading: "Let's Work Together<span>.</span>",
+      contactText: "Or contact us directly via",
+      firstName: "First Name",
+      lastName: "Last Name",
+      email: "Email Address",
+      company: "Company (optional)",
+      phone: "Phone Number (optional)",
+      message: "Your Message",
+      attachFile: "Attach File",
+      submitBtn: "Send Message",
+      poweredBy: "Powered by",
+      // Form messages
+      sendingMessage: "Sending...",
+      messageSent: "Message sent successfully!",
+      fileSelected: "File selected"
+    }
+  },
+  
+  // Mhamed Amine Elleuch translations
+  mhamed: {
+    fr: {
+      pageTitle: "Carte de Visite Numérique - Mhamed Amine Elleuch | MarQenti",
+      navBusinessCard: "Carte de Visite",
+      navContact: "Nous Contacter",
+      jobTitle: "CTO",
+      address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisie",
+      contactUsBtn: "Nous Contacter",
+      contactHeading: "Travaillons Ensemble<span>.</span>",
+      contactText: "Ou contactez-nous directement via",
+      firstName: "Prénom",
+      lastName: "Nom de famille",
+      email: "Adresse e-mail",
+      company: "Entreprise (optionnel)",
+      phone: "Numéro de téléphone (optionnel)",
+      message: "Votre message",
+      attachFile: "Joindre un fichier",
+      submitBtn: "Envoyer le message",
+      poweredBy: "Propulsé par",
+      // Form messages
+      sendingMessage: "Envoi en cours...",
+      messageSent: "Message envoyé avec succès!",
+      fileSelected: "Fichier sélectionné"
+    },
+    en: {
+      pageTitle: "Digital Business Card - Mhamed Amine Elleuch | MarQenti",
+      navBusinessCard: "Business Card",
+      navContact: "Contact Us",
+      jobTitle: "CTO",
+      address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisia",
+      contactUsBtn: "Contact Us",
+      contactHeading: "Let's Work Together<span>.</span>",
+      contactText: "Or contact us directly via",
+      firstName: "First Name",
+      lastName: "Last Name",
+      email: "Email Address",
+      company: "Company (optional)",
+      phone: "Phone Number (optional)",
+      message: "Your Message",
+      attachFile: "Attach File",
+      submitBtn: "Send Message",
+      poweredBy: "Powered by",
+      // Form messages
+      sendingMessage: "Sending...",
+      messageSent: "Message sent successfully!",
+      fileSelected: "File selected"
+    }
   }
 };
 
+// Detect current person based on page title
+function getCurrentPerson() {
+  const title = document.title;
+  if (title.includes('Yessine Gargouri')) return 'yessine';
+  if (title.includes('Mhamed Amine Elleuch')) return 'mhamed';
+  return 'amir'; // default
+}
+
+const currentPerson = getCurrentPerson();
 let currentLanguage = localStorage.getItem('selectedLanguage') || 'fr';
 
 function setLanguage(lang) {
-  if (!translations[lang]) return;
+  if (!translations[currentPerson] || !translations[currentPerson][lang]) return;
   
   currentLanguage = lang;
   localStorage.setItem('selectedLanguage', lang);
   document.documentElement.lang = lang;
   
   // Update page title
-  document.title = translations[lang].pageTitle;
+  document.title = translations[currentPerson][lang].pageTitle;
   
   // Update all elements with data-translate-key
   document.querySelectorAll('[data-translate-key]').forEach(element => {
     const key = element.getAttribute('data-translate-key');
-    if (translations[lang][key]) {
+    if (translations[currentPerson][lang][key]) {
       if (element.tagName === 'INPUT' && element.type === 'submit') {
-        element.value = translations[lang][key];
+        element.value = translations[currentPerson][lang][key];
       } else {
-        element.innerHTML = translations[lang][key];
+        element.innerHTML = translations[currentPerson][lang][key];
       }
     }
   });
@@ -166,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const submitBtn = form.querySelector('input[type="submit"]');
       const originalText = submitBtn.value;
       submitBtn.classList.add('loading');
-      submitBtn.value = translations[currentLanguage].sendingMessage;
+      submitBtn.value = translations[currentPerson][currentLanguage].sendingMessage;
       
       // Validate required fields
       const requiredFields = form.querySelectorAll('[required]');
@@ -202,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.classList.remove('loading');
           if (isValid) {
           // Show success message
-          submitBtn.value = translations[currentLanguage].messageSent;
+          submitBtn.value = translations[currentPerson][currentLanguage].messageSent;
           submitBtn.style.background = '#28a745';
           
           setTimeout(() => {
