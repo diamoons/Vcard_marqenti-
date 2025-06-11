@@ -844,59 +844,135 @@ main {
   }
 }
 
+@media (max-width: 768px) {
+  header .container {
+    height: 60px;
+    padding: 0 1rem;
+  }
+  
+  header ul {
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo {
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+  
+  .logo h2 {
+    font-size: 1.1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    margin-left: 0;
+    white-space: nowrap;
+  }
+  
+  .language-switcher {
+    margin-left: 0;
+    gap: 0.25rem;
+    flex-shrink: 0;
+  }
+  
+  .lang-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    min-width: 35px;
+  }
+}
+
 @media (max-width: 650px) {
   header .container {
-    height: 50px;
+    height: 55px;
+    padding: 0 0.8rem;
   }
+  
   header ul {
-    gap: 1rem;
-  }
-  .logo img {
-    height: 25px;
-  }
-  .logo h2 {
-    font-size: 1.15rem;
-  }
-  .nav-link {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
-  }
-  .language-switcher {
-    margin-left: 1rem;
     gap: 0.3rem;
   }
-  .lang-btn {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
+  
+  .logo img {
+    height: 22px;
   }
+  
+  .logo h2 {
+    font-size: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.4rem;
+  }
+  
+  .language-switcher {
+    gap: 0.2rem;
+  }
+  
+  .lang-btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.65rem;
+    min-width: 30px;
+  }
+  
   .left {
-    padding: 50px 1.5rem 0;
+    padding: 55px 1.5rem 0;
     grid-template-columns: 1fr;
     justify-content: center;
   }
+  
   .form-wrapper {
     width: 100%;
     padding: 1rem 0;
   }
-  header ul {
-    justify-content: space-between;
-    width: 100%;
-  }
-  .logo {
-    margin-right: 0;
-  }
-  .nav-link {
-    margin-left: 0;
-  }
+  
   .right {
     display: none;
   }
+  
   .input-wrap .icon {
     display: none;
   }
 }
 
 @media (max-width: 420px) {
+  header .container {
+    height: 50px;
+    padding: 0 0.5rem;
+  }
+  
+  header ul {
+    gap: 0.2rem;
+  }
+  
+  .logo img {
+    height: 20px;
+  }
+  
+  .logo h2 {
+    font-size: 0.9rem;
+  }
+  
+  .nav-link {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.3rem;
+  }
+  
+  .language-switcher {
+    gap: 0.15rem;
+  }
+  
+  .lang-btn {
+    padding: 0.15rem 0.3rem;
+    font-size: 0.6rem;
+    min-width: 25px;
+  }
+  
   .input-wrap {
     grid-column: span 2;
   }
@@ -907,13 +983,6 @@ main {
   .contact-heading h1 {
     font-size: 1.9rem;
     line-height: 1;
-  }
-  .logo img {
-    height: 25px;
-    margin-right: 0.7rem;
-  }
-  .logo h2 {
-    font-size: 1.15rem;
   }
   .input-wrap .icon {
     display: none;
