@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-translate-key="pageTitle">Carte de Visite Numérique - Amir Damak | MarQenti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <ul>
+        <li>
+          <a href="#" class="logo">
+            <h2>Mar<span>Q</span>enti</h2>
+          </a>
+        </li>
+        <li><a href="#business-card" class="nav-link active" data-translate-key="navBusinessCard">Carte de Visite</a></li>
+        <li><a href="#contact" class="nav-link" data-translate-key="navContact">Nous Contacter</a></li>
+        <li class="language-switcher">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </li>
+      </ul>
+    </div>
+  </header>
+  
+  <main>
+    <section id="business-card" class="business-card">
+      <div class="background-animations">
+        <div class="floating-elements"></div>
+      </div>
+      <div class="container">
+        <div class="card-grid">
+          <div class="card-left">
+            <div class="card-header">
+              <div class="logo-area">
+                <img src="img/Logo_marqenti.png" alt="MarQenti Logo">
+              </div>
+              <h2>Mar<span>Q</span>enti</h2>
+            </div>
+            <div class="card-body">
+              <h3>Amir Damak</h3>
+              <p class="title" data-translate-key="jobTitle">PDG & Fondateur</p>
+              <div class="contact-info">
+                <p>
+                  <i class="fas fa-phone"></i>
+                  <a href="tel:+21626994474">+216 26 994 474</a>
+                </p>
+                <p>
+                  <i class="fab fa-whatsapp"></i>
+                  <a href="https://wa.me/21626994474" target="_blank">WhatsApp: +216 26 994 474</a>
+                </p>
+                <p>
+                  <i class="fas fa-envelope"></i>
+                  <a href="mailto:amirdammak@marqenti.tn">amirdammak@marqenti.tn</a>
+                </p>
+                <p>
+                  <i class="fas fa-globe"></i>
+                  <a href="https://www.marqenti.tn" target="_blank">www.marqenti.tn</a>
+                </p>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i>
+                  <a href="https://www.google.com/maps/search/Route+de+Tunis+km+1.5,+Immeuble+Mariem,+Sfax,+Tunisia" target="_blank">
+                    <span data-translate-key="address">Route de Tunis km 1.5<br>
+                    Imm Mariem, Sfax<br>
+                    Tunisie</span>
+                  </a>
+                </p>
+              </div>
+              <a href="#contact" class="contact-btn">
+                <span data-translate-key="contactUsBtn">Nous Contacter</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d51701.183240212216!2d10.720968414553553!3d34.74943541760938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e6!4m4!1s0x1301d3282184b887%3A0xbcd7d91702d9d4fc!3m2!1d34.7551577!2d10.7621007!4m5!1s0x1301d3282184b887%3A0xbcd7d91702d9d4fc!2simmeuble%20mariam%2C%20Route%20tunis%2C%20km%201%205%2C%20Sfax%203000!3m2!1d34.7551577!2d10.7621007!5e0!3m2!1sen!2stn!4v1749650243337!5m2!1sen!2stn"
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container" style="margin-bottom: 50px !important;">
+        <div class="left">
+          <div class="form-wrapper">
+            <div class="contact-heading">
+              <h1 data-translate-key="contactHeading">Travaillons Ensemble<span>.</span></h1>
+              <p class="text"><span data-translate-key="contactText">Ou contactez-nous directement via</span> <a href="mailto:amirdammak@marqenti.tn">amirdammak@marqenti.tn</a></p>
+            </div>
+            <form action="process.php" method="post" class="contact-form" enctype="multipart/form-data">
+              <div class="input-wrap">
+                <input class="contact-input" type="text" autocomplete="off" name="FirstName" required>
+                <label data-translate-key="firstName">Prénom</label>
+                <i class="icon fa-solid fa-user"></i>
+              </div>
+              <div class="input-wrap">
+                <input class="contact-input" type="text" autocomplete="off" name="LastName" required>
+                <label data-translate-key="lastName">Nom de famille</label>
+                <i class="icon fa-solid fa-user"></i>
+              </div>
+              <div class="input-wrap w-100">
+                <input class="contact-input" type="email" autocomplete="off" name="Email" required>
+                <label data-translate-key="email">Adresse e-mail</label>
+                <i class="icon fa-solid fa-envelope"></i>
+              </div>
+              <div class="input-wrap w-100">
+                <input class="contact-input" type="text" autocomplete="off" name="Company">
+                <label data-translate-key="company">Entreprise (optionnel)</label>
+                <i class="icon fa-solid fa-building"></i>
+              </div>
+              <div class="input-wrap w-100">
+                <input class="contact-input" type="tel" autocomplete="off" name="Phone">
+                <label data-translate-key="phone">Numéro de téléphone (optionnel)</label>
+                <i class="icon fa-solid fa-phone"></i>
+              </div>
+              <div class="input-wrap textarea w-100">
+                <textarea class="contact-input" name="Message" autocomplete="off" required></textarea>
+                <label data-translate-key="message">Votre message</label>
+                <i class="icon fa-solid fa-message"></i>
+              </div>
+              <div class="contact-buttons w-100">
+                <button type="button" class="btn upload">
+                  <span>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <span data-translate-key="attachFile">Joindre un fichier</span>
+                  </span>
+                  <input type="file" name="attachment">
+                </button>
+                <input type="submit" data-translate-key="submitBtn" value="Envoyer le message" class="btn">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="right">
+          <div class="image-wrapper">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600' viewBox='0 0 400 600'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23c3001e;stop-opacity:0.1' /%3E%3Cstop offset='100%25' style='stop-color:%23c3001e;stop-opacity:0.3' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='600' fill='url(%23grad1)'/%3E%3Ccircle cx='200' cy='300' r='150' fill='none' stroke='%23c3001e' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='200' cy='300' r='100' fill='none' stroke='%23c3001e' stroke-width='1' opacity='0.2'/%3E%3C/svg%3E" class="img" alt="MarQenti Design">
+            <div class="wave-wrap">
+              <svg class="wave" viewBox="0 0 783 1536" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="wave"
+                  d="M236.705 1356.18C200.542 1483.72 64.5004 1528.54 1 1535V1H770.538C793.858 63.1213 797.23 196.197 624.165 231.531C407.833 275.698 274.374 331.715 450.884 568.709C627.393 805.704 510.079 815.399 347.561 939.282C185.043 1063.17 281.908 1196.74 236.705 1356.18Z" />
+              </svg>
+            </div>
+            <svg class="dashed-wave" viewBox="0 0 345 877" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="dashed-wave" d="M0.5 876C25.6667 836.167 73.2 739.8 62 673C48 589.5 35.5 499.5 125.5 462C215.5 424.5 150 365 87 333.5C24 302 44 237.5 125.5 213.5C207 189.5 307 138.5 246 87C185 35.5 297 1 344.5 1"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="powered-by">
+        <span data-translate-key="poweredBy">Propulsé par</span>
+        <a href="https://marqenti.tn" target="_blank">MarQenti</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
