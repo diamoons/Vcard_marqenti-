@@ -1,0 +1,35 @@
+# Git internal files (these shouldn't be in a working repository)
+HEAD
+config
+description
+index
+packed-refs
+hooks/
+info/
+logs/
+objects/
+refs/
+
+# Large zip files
+*.zip
+
+# Database files (if they contain sensitive data)
+db.php
+
+# Node modules (if any)
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
