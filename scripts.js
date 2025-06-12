@@ -6,7 +6,7 @@ const translations = {
       pageTitle: "Carte de Visite Numérique - Amir Damak | MarQenti",
       navBusinessCard: "Carte de Visite",
       navContact: "Nous Contacter",
-      jobTitle: "PDG & Fondateur",
+      jobTitle: "PDG & Co-Fondateur",
       address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisie",
       contactUsBtn: "Nous Contacter",
       contactHeading: "Travaillons Ensemble<span>.</span>",
@@ -29,7 +29,7 @@ const translations = {
       pageTitle: "Digital Business Card - Amir Damak | MarQenti",
       navBusinessCard: "Business Card",
       navContact: "Contact Us",
-      jobTitle: "CEO & Founder",
+      jobTitle: "CEO & Co-Founder",
       address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisia",
       contactUsBtn: "Contact Us",
       contactHeading: "Let's Work Together<span>.</span>",
@@ -56,7 +56,7 @@ const translations = {
       pageTitle: "Carte de Visite Numérique - Yessine Gargouri | MarQenti",
       navBusinessCard: "Carte de Visite",
       navContact: "Nous Contacter",
-      jobTitle: "Directeur Commercial",
+      jobTitle: "CSO & Co-Fondateur",
       address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisie",
       contactUsBtn: "Nous Contacter",
       contactHeading: "Travaillons Ensemble<span>.</span>",
@@ -79,7 +79,7 @@ const translations = {
       pageTitle: "Digital Business Card - Yessine Gargouri | MarQenti",
       navBusinessCard: "Business Card",
       navContact: "Contact Us",
-      jobTitle: "Sales Director",
+      jobTitle: "CSO & Co-Founder",
       address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisia",
       contactUsBtn: "Contact Us",
       contactHeading: "Let's Work Together<span>.</span>",
@@ -101,12 +101,11 @@ const translations = {
   },
   
   // Mhamed Amine Elleuch translations
-  mhamed: {
-    fr: {
+  mhamed: {    fr: {
       pageTitle: "Carte de Visite Numérique - Mhamed Amine Elleuch | MarQenti",
       navBusinessCard: "Carte de Visite",
       navContact: "Nous Contacter",
-      jobTitle: "CTO",
+      jobTitle: "CTO & Co-Fondateur",
       address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisie",
       contactUsBtn: "Nous Contacter",
       contactHeading: "Travaillons Ensemble<span>.</span>",
@@ -124,12 +123,11 @@ const translations = {
       sendingMessage: "Envoi en cours...",
       messageSent: "Message envoyé avec succès!",
       fileSelected: "Fichier sélectionné"
-    },
-    en: {
+    },    en: {
       pageTitle: "Digital Business Card - Mhamed Amine Elleuch | MarQenti",
       navBusinessCard: "Business Card",
       navContact: "Contact Us",
-      jobTitle: "CTO",
+      jobTitle: "CTO & Co-Founder",
       address: "Route de Tunis km 1.5<br>Immeuble Mariem, Sfax<br>Tunisia",
       contactUsBtn: "Contact Us",
       contactHeading: "Let's Work Together<span>.</span>",
@@ -145,9 +143,45 @@ const translations = {
       poweredBy: "Powered by",
       // Form messages
       sendingMessage: "Sending...",
-      messageSent: "Message sent successfully!",
-      fileSelected: "File selected"
+      messageSent: "Message sent successfully!",      fileSelected: "File selected"
     }
+  }
+};
+
+// Team members data for "Meet the Team" section
+const teamMembers = {
+  amir: {
+    name: "Amir Damak",
+    titleFr: "PDG & Co-Fondateur", 
+    titleEn: "CEO & Co-Founder",
+    filename: "index.html",
+    avatar: "img/Logo_marqenti.png" // We'll use logo as placeholder for now
+  },
+  yessine: {
+    name: "Yessine Gargouri",
+    titleFr: "CSO & Co-Fondateur",
+    titleEn: "CSO & Co-Founder", 
+    filename: "yessine.html",
+    avatar: "img/Logo_marqenti.png"
+  },
+  mhamed: {
+    name: "Mhamed Amine Elleuch", 
+    titleFr: "CTO & Co-Fondateur",
+    titleEn: "CTO & Co-Founder",
+    filename: "mhamed.html",
+    avatar: "img/Logo_marqenti.png"
+  }
+};
+
+// Add translations for team section
+const teamTranslations = {
+  fr: {
+    meetTheTeam: "Rencontrez l'Équipe",
+    otherFounders: "Autres Co-Fondateurs"
+  },
+  en: {
+    meetTheTeam: "Meet the Team", 
+    otherFounders: "Other Co-Founders"
   }
 };
 
@@ -161,6 +195,48 @@ function getCurrentPerson() {
 
 const currentPerson = getCurrentPerson();
 let currentLanguage = localStorage.getItem('selectedLanguage') || 'fr';
+
+// Generate team cards dynamically
+function generateTeamCards() {
+  const teamContainer = document.querySelector('.team-grid');
+  if (!teamContainer) return;
+  
+  // Clear existing content
+  teamContainer.innerHTML = '';
+  
+  // Get other team members (exclude current person)
+  const otherMembers = Object.keys(teamMembers).filter(key => key !== currentPerson);
+  
+  otherMembers.forEach(memberKey => {
+    const member = teamMembers[memberKey];
+    const card = document.createElement('div');
+    card.className = 'team-card';
+    
+    const title = currentLanguage === 'fr' ? member.titleFr : member.titleEn;
+    
+    card.innerHTML = `
+      <div class="team-card-inner">
+        <div class="team-avatar">
+          <img src="${member.avatar}" alt="${member.name}">
+        </div>
+        <div class="team-info">
+          <h3>${member.name}</h3>
+          <p>${title}</p>
+        </div>
+        <div class="team-link">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    `;
+    
+    // Add click event to navigate to member's card
+    card.addEventListener('click', () => {
+      window.location.href = member.filename;
+    });
+    
+    teamContainer.appendChild(card);
+  });
+}
 
 function setLanguage(lang) {
   if (!translations[currentPerson] || !translations[currentPerson][lang]) return;
@@ -191,9 +267,22 @@ function setLanguage(lang) {
       btn.classList.add('active');
     }
   });
-  
-  // Update Google Maps language parameter
+    // Update Google Maps language parameter
   updateMapLanguage(lang);
+  
+  // Update team section translations
+  const teamHeading = document.querySelector('[data-translate-key="meetTheTeam"]');
+  const teamSubheading = document.querySelector('[data-translate-key="otherFounders"]');
+  
+  if (teamHeading && teamTranslations[lang]) {
+    teamHeading.textContent = teamTranslations[lang].meetTheTeam;
+  }
+  if (teamSubheading && teamTranslations[lang]) {
+    teamSubheading.textContent = teamTranslations[lang].otherFounders;
+  }
+  
+  // Regenerate team cards with new language
+  generateTeamCards();
 }
 
 function updateMapLanguage(lang) {
@@ -550,7 +639,9 @@ document.addEventListener('DOMContentLoaded', function() {
       floatingElementsContainer.appendChild(particle);
     }
   }
-
   createParticles(); // Create particles on load
+
+  // Generate team cards
+  generateTeamCards();
 
 });
